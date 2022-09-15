@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap');
+
+
+:root {
+    /* ### Primary */
+
+--Red: hsl(0, 100%, 68%);
+
+/* ### Neutral */
+
+--Very-Dark-Blue: hsl(230, 29%, 20%);
+--Dark-Grayish-Blue: hsl(230, 11%, 40%);
+--Grayish-Blue: hsl(231, 7%, 65%);
+--Light-Grayish-Blue: hsl(207, 33%, 95%);
+/* 
+## Typography
+
+### Body Copy */
+
+--Font-size: 18px;
+--ff-barlow: 'Barlow', sans-serif;
+--ff-barlow-condensed: 'Barlow Condensed', sans-serif;
+--fw-regular:400;
+--fw-bold : 700;
+}
+
+    .attribution { font-size: 11px; text-align: center; display: none;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:var(--ff-barlow-condensed);
+    font-weight: var(--fw-regular);
+    font-size: 18px;
+}
+
+body {
+    height: fit-content;
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    
+}
+    /* styling custom background using an elment from dom */
+.background-style {
+    background-color: var(--Light-Grayish-Blue);
+    position: absolute;
+    width: 50%;
+    height: 55%;
+    right: 0;
+    border-bottom-left-radius:50px;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: clamp(2rem,5vw,5rem);
+    position: relative;
+}
+
+/* navigation menu styling is nav.css file  */
+
+img {
+    max-width: 138%;
+}
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+   .illustration-container {
+    padding-block: 1rem;
+   }
+    article {
+        padding: 4rem 1rem;
+    }
+        .new {
+            background-color: var(--Very-Dark-Blue);
+            color: var(--Light-Grayish-Blue);
+            padding: 0.1rem 0.5rem;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            margin-right: clamp(1rem,1.5vw,1.5rem);
+        }
+        .spaced {
+            color: var(--Grayish-Blue);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: var(--ff-barlow);
+            font-size: clamp(0.7rem,0.9vw,1.1rem);
+        }
+    .heading {
+        padding-block: 1rem;
+        font-weight: var(--fw-bold);
+        font-size: clamp(2rem,3.5vw,3.5rem);
+        color: var(--Very-Dark-Blue);
+        text-transform: uppercase;
+    }
+    .desc {
+        width: 15rem;
+        color: var(--Dark-Grayish-Blue);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-family: var(--ff-barlow);
+        font-size: clamp(1rem,2vw,1rem);
+    }
+    .last-line {
+        display: flex;
+        align-items: center;
+    }
+    .schedule-btn {
+        max-width: 65%;
+        background-color: hsl(0, 100%, 68%,1);
+        color: var(--Light-Grayish-Blue);
+        border: 0;
+        padding: 0.5rem 0.5rem;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-size: clamp(0.8rem,0.8vw,1.5rem);
+        font-weight: var(--fw-bold);
+        letter-spacing: 1px;
+        margin-right: 0.5rem;
+    }
+    .schedule-btn:hover{
+        cursor: pointer;
+        background-color: hsl(0, 100%, 68%,0.8);
+
+    }
+
+@media screen and (min-width:480px) {
+    img {
+        max-width: 100%;
+    }
+}
+
+
+@media screen and (min-width:700px) {
+    img {
+        max-width: 200%;
+    }
+
+    body {
+        width: 100vw;
+        overflow: hidden;
+    }
+    main {
+        width: 100%;
+        padding-inline: 10%;
+        flex-direction: row-reverse;
+        margin-inline: auto;
+        overflow: hidden;
+    }
+    .illustration-container {
+        position: relative;
+        width: 90%;
+        margin-block: auto;
+    }
+        
+    article {
+        padding: 3rem 2rem;
+    }
+    .desc {
+        margin-bottom: 4rem;
+    }
+    .last-line {
+        width: 100%;
+        white-space: nowrap;
+    }
+    .schedule-btn {
+        max-width: 70%;
+        padding: clamp(0.5rem,1vw,1rem) clamp(0.5rem,2vw,2rem);
+    }
+
+}
+
+
+
